@@ -1,4 +1,4 @@
-// JS IMPORTATO DA ARRAY CAROUSEL CON ARRAY SOSTITUTI DA ARRAY OBJECTS
+// JS IMPORTATO DA ARRAY CAROUSEL CON ARRAY SOSTITUTI DA ARRAY OBJECTS, E FOREACH AL POSTO DEL LOOP FOR
 
 // IMG ARRAY
 const images = [ 
@@ -35,7 +35,7 @@ let index = 0;
 // VARIABILE CONTAINER
 let itemContenitore = document.querySelector(".item-container");
 
-// LOOP CHE CREA DIV CONTENENTE TAG IMG IN BASE ALLA LUNGHEZZA DELL'ARRAY
+//CREARE DIV CONTENENTE IMG E DESCRIZIONE PER OGNI ELEMENTO DELL'ARRAY DI OGGETTI
 images.forEach((element, i) => {
   itemContenitore.innerHTML+=
   `<div class="item" id="slide${i}">
@@ -56,7 +56,7 @@ const up = document.querySelector(".up");
 const down = document.querySelector(".down");
 
 //  BOTTONE SU CLICCATO
-up.addEventListener("click",
+down.addEventListener("click",
  function () {
   // AVANZA DI 1 NELL'INDICE
   index++;
@@ -76,7 +76,7 @@ up.addEventListener("click",
 );
 
 // BOTTONE GIU CLICCATO
-down.addEventListener("click",
+up.addEventListener("click",
 function (){
   // DIMINUISCE DI 1 NELL'INDICE
   index--;
@@ -94,4 +94,3 @@ function (){
   imgVisualizzata.classList.add("active");
   }
 );
-  
