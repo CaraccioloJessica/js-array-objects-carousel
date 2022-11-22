@@ -31,6 +31,9 @@ const images = [
 
 //INDEX ATTUALE
 let index = 0;
+/* BONUS 2
+  const timer = setInterval(countdown, 3000);
+ */
 
 // VARIABILE CONTAINER
 let itemContenitore = document.querySelector(".item-container");
@@ -94,3 +97,23 @@ function (){
   imgVisualizzata.classList.add("active");
   }
 );
+
+/*
+-------------------BONUS 2------------------------
+// OGNI 3 SECONDI L'IMMAGINE CAMBIA DA SOLA
+function countdown() {
+  index++;
+  // SE L'INDICE PASSA L'ULTIMA FOTO DELL'ARRAY
+  if (index > images.length - 1) {
+    // INDICE TORNA A 0
+    index = 0;
+  }
+
+  // DISPLAY NONE ALL'ITEM
+  imgVisualizzata.classList.remove("active");
+  // AVANZA DI 1
+  imgVisualizzata = document.getElementById("slide" + index);
+  // DAI DISPLAY BLOCK
+  imgVisualizzata.classList.add("active");  
+}
+*/
