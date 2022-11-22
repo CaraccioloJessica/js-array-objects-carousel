@@ -1,3 +1,5 @@
+// JS IMPORTATO DA ARRAY CAROUSEL CON ARRAY SOSTITUTI DA ARRAY OBJECTS
+
 // IMG ARRAY
 const images = [ 
 { 
@@ -34,9 +36,7 @@ let index = 0;
 let itemContenitore = document.querySelector(".item-container");
 
 // LOOP CHE CREA DIV CONTENENTE TAG IMG IN BASE ALLA LUNGHEZZA DELL'ARRAY
-for (let i = 0; i < images.length; i++){
-  let element = images[i];
-
+images.forEach((element, i) => {
   itemContenitore.innerHTML+=
   `<div class="item" id="slide${i}">
     <img src="${element.image}">
@@ -44,8 +44,8 @@ for (let i = 0; i < images.length; i++){
       <h3>${element.title}</h3>
       <p>${element.text}</p>
     </div>
-  </div>`
-}
+  </div>`;
+});
 
 // VARIABILI IMMAGINI VISUALIZZATE
 let imgVisualizzata = document.getElementById("slide" + index);
